@@ -9,7 +9,13 @@ namespace ShoppingBackend.Controllers
     public class ShoplistController : ControllerBase
     {
 
-        private readonly ShoplistDbContext db = new();
+        public readonly ShoplistDbContext db = new();
+        private ShoplistDbContext db1;
+
+        public ShoplistController(ShoplistDbContext db1)
+        {
+            this.db1 = db1;
+        }
 
 
         // Hakee ostoslistan
